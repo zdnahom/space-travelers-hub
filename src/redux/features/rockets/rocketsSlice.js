@@ -14,11 +14,15 @@ export const fetchRockets = createAsyncThunk(
 export const reserveRocket = createAsyncThunk(
   'rockets/reserveRocket',
   async (id) => {
-    const response = await axios.patch(`${baseUrl}/${id}`, {
-      reserved: true,
-    });
-    return response.data;
+    // simulate API request to reserve the rocket
+    // since the API doesn't have a reserve endpoint
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    return id;
   },
+);
+
+export const selectReservedRockets = (state) => state.rockets.rockets.filter(
+  (rocket) => rocket.reserved,
 );
 
 const rocketsSlice = createSlice({
@@ -26,33 +30,31 @@ const rocketsSlice = createSlice({
   initialState: {
     rockets: [],
     status: 'idle',
-    error: false,
+    error: null,
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchRockets.pending, (state) => ({
-        ...state,
-        status: 'loading',
-      }))
-      .addCase(fetchRockets.fulfilled, (state, action) => ({
-        ...state,
-        status: 'success',
-        rockets: action.payload,
-      }))
-      .addCase(fetchRockets.rejected, (state) => ({
-        ...state,
-        status: 'rejected',
-        error: true,
-      }))
+      .addCase(fetchRockets.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        state.status = 'success';
+        state.rockets = action.payload.map((rocket) => ({
+          ...rocket,
+          reserved: false,
+        }));
+      })
+      .addCase(fetchRockets.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      })
       .addCase(reserveRocket.fulfilled, (state, action) => {
-        const updatedRockets = state.rockets.map((rocket) => {
-          if (rocket.id === action.payload.id) {
-            return { ...rocket, reserved: true };
-          }
-          return rocket;
-        });
-        return { ...state, rockets: updatedRockets };
+        const rocketId = action.payload;
+        const reservedRocket = state.rockets.find((rocket) => rocket.id === rocketId);
+        if (reservedRocket) {
+          reservedRocket.reserved = true;
+        }
       });
   },
 });
