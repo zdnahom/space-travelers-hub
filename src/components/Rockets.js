@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchRockets } from '../redux/features/rockets/rocketsSlice';
+import { fetchRockets, reserveRocket } from '../redux/features/rockets/rocketsSlice';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,10 @@ const Rockets = () => {
   useEffect(() => {
     dispatch(fetchRockets());
   }, [dispatch]);
+
+  const handleReserveRocket = (id) => {
+    dispatch(reserveRocket(id));
+  };
 
   return (
     <div>
@@ -21,9 +25,9 @@ const Rockets = () => {
             <h2>{rocket.name}</h2>
             <p>{rocket.description}</p>
             {rocket.flickr_images.length > 0 && (
-            <img src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
+            <img src={rocket.flickr_images[0]} alt={rocket.name} />
             )}
-            <button type="button">Reserve Rocket</button>
+            <button type="button" onClick={() => handleReserveRocket(rocket.id)}>Reserve Rocket</button>
           </div>
         ))}
       </>

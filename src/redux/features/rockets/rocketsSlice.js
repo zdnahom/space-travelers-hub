@@ -11,6 +11,16 @@ export const fetchRockets = createAsyncThunk(
   },
 );
 
+export const reserveRocket = createAsyncThunk(
+  'rockets/reserveRocket',
+  async (id) => {
+    const response = await axios.patch(`${baseUrl}/${id}`, {
+      reserved: true,
+    });
+    return response.data;
+  },
+);
+
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState: {
@@ -34,7 +44,16 @@ const rocketsSlice = createSlice({
         ...state,
         status: 'rejected',
         error: true,
-      }));
+      }))
+      .addCase(reserveRocket.fulfilled, (state, action) => {
+        const updatedRockets = state.rockets.map((rocket) => {
+          if (rocket.id === action.payload.id) {
+            return { ...rocket, reserved: true };
+          }
+          return rocket;
+        });
+        return { ...state, rockets: updatedRockets };
+      });
   },
 });
 
