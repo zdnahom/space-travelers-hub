@@ -1,14 +1,9 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getMissions } from "../redux/features/missions/missionsSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { joinMission } from '../redux/features/missions/missionsSlice';
 
 const Missions = () => {
   const { missions, isLoading } = useSelector((store) => store.missions);
-  console.log(missions);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getMissions());
-  }, []);
   return (
     <section>
       {isLoading ? (
@@ -20,17 +15,19 @@ const Missions = () => {
               <th>Mission</th>
               <th>Description</th>
               <th>Status</th>
-              <th></th>
+              <th>{' '}</th>
             </tr>
             {missions.map((mission) => (
-              <tr>
+              <tr key={mission.mission_id}>
                 <td>{mission.mission_name}</td>
                 <td>{mission.description}</td>
-                <td>Not a member</td>
-                <td> <button type="button">Join Mission</button></td>
+                <td>{mission.isMember ? 'Active Member' : 'Not A Member'}</td>
+                <td>
+                  <button type="button" onClick={() => dispatch(joinMission(mission.mission_id))}>{mission.isMember ? 'Leave Mission' : 'Join Mission'}</button>
+                </td>
               </tr>
             ))}
-            </table>
+          </table>
         </div>
       )}
     </section>
