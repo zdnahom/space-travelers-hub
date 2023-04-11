@@ -20,16 +20,39 @@ const Rockets = () => {
       {status === 'loading' && <div>Loading...</div>}
       {status === 'success' && (
       <>
-        {rockets.map((rocket) => (
-          <div key={rocket.id}>
-            <h2>{rocket.name}</h2>
-            <p>{rocket.description}</p>
-            {rocket.flickr_images.length > 0 && (
-            <img src={rocket.flickr_images[0]} alt={rocket.name} />
-            )}
-            <button type="button" onClick={() => handleReserveRocket(rocket.id)}>Reserve Rocket</button>
-          </div>
-        ))}
+        <div className="rockets-container">
+          {rockets.map((rocket) => (
+            <div key={rocket.id} className="rockets">
+              {rocket.flickr_images.length > 0 && (
+              <img src={rocket.flickr_images[0]} alt={rocket.name} />
+              )}
+              <div className="rockets-description">
+                <h2>{rocket.name}</h2>
+                <p className="rocket-para">{rocket.description}</p>
+                {rocket.reserved ? (
+                  <>
+                    <span className="reserved-badge">Reserved</span>
+                    <button
+                      type="button"
+                      className="cancel-reservation-btn"
+                      onClick={() => handleReserveRocket(rocket.id)}
+                    >
+                      Cancel reservation
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    type="button"
+                    className="reserve-rocket-btn"
+                    onClick={() => handleReserveRocket(rocket.id)}
+                  >
+                    Reserve Rocket
+                  </button>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </>
       )}
       {status === 'rejected' && <div>Failed to load rockets data</div>}
