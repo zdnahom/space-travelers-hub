@@ -4,6 +4,8 @@ import axios from 'axios';
 const url = 'https://api.spacexdata.com/v3/missions';
 const initialState = {
   missions: [],
+  isLoading: false,
+  error: null,
 };
 export const getMissions = createAsyncThunk('missions/getMissions', async (_, thunkAPI) => {
   try {
@@ -17,14 +19,21 @@ const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(getMissions.fulfilled, (state, action) => {
-      const fetchedMissions = action.payload.map((mission) => ({
-        mission_id: mission.mission_id,
-        mission_name: mission.mission_name,
-        description: mission.description,
+    builder
+      .addCase(getMissions.pending, (state) => ({ ...state, isLoading: true }))
+      .addCase(getMissions.fulfilled, (state, action) => {
+        const fetchedMissions = action.payload.map((mission) => ({
+          mission_id: mission.mission_id,
+          mission_name: mission.mission_name,
+          description: mission.description,
+        }));
+        return { ...state, missions: fetchedMissions, isLoading: false };
+      })
+      .addCase(getMissions.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.payload,
       }));
-      return { ...state, missions: fetchedMissions };
-    });
   },
 });
 
