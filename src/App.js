@@ -1,21 +1,25 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Rockets from './components/Rockets';
 import NavBar from './components/NavBar';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
+import store from './redux/store';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Missions />} />
-          <Route path="/profile" element={<MyProfile />} />
-        </Routes>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Rockets />} />
+            <Route path="/missions" element={<Missions />} />
+            <Route path="/profile" element={<MyProfile />} />
+          </Routes>
+        </div>
+      </Provider>
     </BrowserRouter>
   );
 }
