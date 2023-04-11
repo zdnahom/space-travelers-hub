@@ -18,11 +18,12 @@ const Rockets = () => {
       <>
         {rockets.map((rocket) => (
           <div key={rocket.id}>
-            <h2>{rocket.rocket_name}</h2>
+            <h2>{rocket.name}</h2>
             <p>{rocket.description}</p>
             {rocket.flickr_images.length > 0 && (
             <img src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
             )}
+            <button type="button">Reserve Rocket</button>
           </div>
         ))}
       </>
