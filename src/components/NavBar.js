@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/images/planet.png';
 const NavBar = () => (
   <header>
     <nav>
-      <img src="https://i.ibb.co/D4dQDjd/planet.png" alt="logo" />
+      <img src={logo} alt="logo" />
       <ul>
         <li><Link to="/">Rockets</Link></li>
         <li><Link to="/missions">Missions</Link></li>
