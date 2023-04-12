@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getMissions());
-  }, []);
+  }, [dispatch]);
   return (
     <BrowserRouter>
       <div className="App">
