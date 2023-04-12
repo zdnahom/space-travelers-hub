@@ -128,3 +128,11 @@
   border-radius: 0.2rem;
   border: 1px solid #dddddd;
 }
+.reserved-item-name,
+.no-reserved{
+  font-size: 1.4rem;
+}
+.no-reserved{
+  color:#b4b2b2
+}
+
