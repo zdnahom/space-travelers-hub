@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { joinMission } from '../redux/features/missions/missionsSlice';
+import { changeMissionStatus } from '../redux/features/missions/missionsSlice';
 
 const Missions = () => {
   const { missions, isLoading } = useSelector((store) => store.missions);
@@ -27,7 +27,7 @@ const Missions = () => {
                   </span>
                 </td>
                 <td className="mission-table-data">
-                  <button type="button" className={mission.reserved ? 'leave-button' : 'join-button'} onClick={() => dispatch(joinMission(mission.mission_id))}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
+                  <button type="button" className={mission.reserved ? 'leave-button' : 'join-button'} onClick={() => dispatch(changeMissionStatus(mission.mission_id))}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
                 </td>
               </tr>
             ))}
