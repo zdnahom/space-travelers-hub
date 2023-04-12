@@ -50,10 +50,18 @@ const rocketsSlice = createSlice({
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
         state.status = 'success';
-        state.rockets = action.payload.map((rocket) => ({
-          ...rocket,
-          reserved: false,
-        }));
+        action.payload.map((rocket) => {
+          const existingRocketIndex = state.rockets.findIndex(
+            (reserve) => reserve.id === rocket.id,
+          );
+          if (existingRocketIndex !== -1) {
+            rocket.reserved = state.rockets[existingRocketIndex].reserved;
+          } else {
+            rocket.reserved = false;
+            state.rockets.push(rocket);
+          }
+          return null;
+        });
       })
       .addCase(fetchRockets.rejected, (state, action) => {
         state.status = 'failed';
