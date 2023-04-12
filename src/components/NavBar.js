@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/planet.png';
+
 const NavBar = () => (
   <header>
     <nav>
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" className="logo" />
       <ul>
-        <li><Link to="/">Rockets</Link></li>
-        <li><Link to="/missions">Missions</Link></li>
-        <li><Link to="/profile">My profile</Link></li>
+        <li><NavLink to="/">Rockets</NavLink></li>
+        <li><NavLink to="/missions">Missions</NavLink></li>
+        <li><NavLink to="/profile">My profile</NavLink></li>
       </ul>
     </nav>
   </header>
