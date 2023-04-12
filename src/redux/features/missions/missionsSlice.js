@@ -24,7 +24,7 @@ const missionsSlice = createSlice({
         if (mission.mission_id === action.payload) {
           return {
             ...mission,
-            isMember: !mission.isMember,
+            reserved: !mission.reserved,
           };
         }
         return mission;
@@ -40,7 +40,7 @@ const missionsSlice = createSlice({
           mission_id: mission.mission_id,
           mission_name: mission.mission_name,
           description: mission.description,
-          isMember: false,
+          reserved: false,
         }));
         return { ...state, missions: fetchedMissions, isLoading: false };
       })
