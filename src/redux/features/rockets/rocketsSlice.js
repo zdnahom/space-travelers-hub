@@ -21,6 +21,16 @@ export const reserveRocket = createAsyncThunk(
   },
 );
 
+export const cancelReservation = createAsyncThunk(
+  'rockets/cancelReservation',
+  async (id) => {
+  // simulate API request to cancel the reservation
+  // since the API doesn't have a cancel reservation endpoint
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    return id;
+  },
+);
+
 export const selectReservedRockets = (state) => state.rockets.rockets.filter(
   (rocket) => rocket.reserved,
 );
@@ -54,6 +64,13 @@ const rocketsSlice = createSlice({
         const reservedRocket = state.rockets.find((rocket) => rocket.id === rocketId);
         if (reservedRocket) {
           reservedRocket.reserved = true;
+        }
+      })
+      .addCase(cancelReservation.fulfilled, (state, action) => {
+        const rocketId = action.payload;
+        const reservedRocket = state.rockets.find((rocket) => rocket.id === rocketId);
+        if (reservedRocket) {
+          reservedRocket.reserved = false;
         }
       });
   },
