@@ -1,9 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { changeMissionStatus } from '../redux/features/missions/missionsSlice';
-
+import { changeMissionStatus,getMissions } from '../redux/features/missions/missionsSlice';
+import { useEffect } from 'react';
 const Missions = () => {
-  const { missions, isLoading, error } = useSelector((store) => store.missions);
+  const { missions, isLoading, error,isFetched } = useSelector((store) => store.missions);
   const dispatch = useDispatch();
+  
+  useEffect(() => {
+    if(!isFetched){
+      dispatch(getMissions());
+    }
+  }, [dispatch]);
+
   if(error){
     return <div className='error'>Failed to fetch</div>
   }
