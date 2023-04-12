@@ -32,18 +32,18 @@ const Rockets = () => {
               )}
               <div className="rockets-description">
                 <h2>{rocket.name}</h2>
+                {rocket.reserved && (
+                <span className="reserved-badge">Reserved</span>
+                )}
                 <p className="rocket-para">{rocket.description}</p>
                 {rocket.reserved ? (
-                  <>
-                    <span className="reserved-badge">Reserved</span>
-                    <button
-                      type="button"
-                      className="cancel-reservation-btn"
-                      onClick={() => handleCancelReservation(rocket.id)}
-                    >
-                      Cancel reservation
-                    </button>
-                  </>
+                  <button
+                    type="button"
+                    className="cancel-reservation-btn"
+                    onClick={() => handleCancelReservation(rocket.id)}
+                  >
+                    Cancel reservation
+                  </button>
                 ) : (
                   <button
                     type="button"
@@ -54,6 +54,7 @@ const Rockets = () => {
                   </button>
                 )}
               </div>
+
             </div>
           ))}
         </div>
