@@ -11,12 +11,12 @@ const MyProfile = () => {
           <ul className="reserved-items-container">
             {joinedMissions.map((mission) => (
               <li key={mission.mission_id} className="reserved-item">
-                <span>{mission.mission_name}</span>
+                <span className="reserved-item-name">{mission.mission_name}</span>
               </li>
             ))}
           </ul>
         ) : (
-          <div>No Rockets reserved</div>
+          <div className="no-reserved">No missions reserved</div>
         )}
       </div>
     </section>
