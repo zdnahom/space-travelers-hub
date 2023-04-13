@@ -1,22 +1,22 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectReservedRockets } from '../redux/features/rockets/rocketsSlice';
 
 const MyProfile = () => {
-  const reservedRockets = useSelector(selectReservedRockets);
+  const rockets = useSelector((state) => state.rockets.rockets);
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved);
+
   return (
     <section>
-      <h2>My Rockets</h2>
       {reservedRockets.length > 0 ? (
         <div>
-          {reservedRockets.map((rocket) => (
-            <div key={rocket.id}>
-              <p>{rocket.name}</p>
-            </div>
-          ))}
+          <h2>My Rockets:</h2>
+          <ul>
+            {reservedRockets.map((rocket) => (
+              <li key={rocket.id}>{rocket.name}</li>
+            ))}
+          </ul>
         </div>
       ) : (
-        <div>No Rockets reserved</div>
+        <p>You haven&apos;t reserved any rockets yet.</p>
       )}
     </section>
   );
