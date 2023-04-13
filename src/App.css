@@ -3,3 +3,71 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.navbar {
+  display: flex;
+  margin: 1% 3%;
+  justify-content: space-between;
+}
+
+.navbar img {
+  width: 4%;
+}
+
+.rockets-container {
+  margin: 3%;
+}
+
+.rockets img {
+  width: 14%;
+}
+
+.rockets {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 1%;
+}
+
+.rockets-description {
+  width: 70%;
+}
+
+.rockets-description h2 {
+  margin-top: -6px;
+}
+
+.reserved-para {
+  display: flex;
+  gap: 1%;
+}
+
+.reserved {
+  margin-top: 13px;
+  background-color: rgb(11, 165, 189);
+  height: 30%;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 7px;
+}
+
+.rocket-para {
+  margin: 5px 10px 10px 0;
+}
+
+.reserve-rocket {
+  background-color: rgb(66, 66, 224);
+  margin-top: 8px;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+
+.cancel-reservation {
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  border: 2px gray solid;
+  padding: 6px 8px;
+  margin-top: 8px;
+}
