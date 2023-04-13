@@ -16,10 +16,12 @@ const Rockets = () => {
               <img src={rocket.image} alt={rocket.name} />
               <div className="rockets-description">
                 <h2>{rocket.name}</h2>
-                <span className={rocket.reserved ? 'reserved' : ''}>
-                  {rocket.reserved ? 'Reserved' : ''}
-                </span>
-                <p>{rocket.description}</p>
+                <div className="reserved-para">
+                  <span className={rocket.reserved ? 'reserved' : ''}>
+                    {rocket.reserved ? 'Reserved' : ''}
+                  </span>
+                  <p className="rocket-para">{rocket.description}</p>
+                </div>
                 <button
                   type="button"
                   className={rocket.reserved ? 'cancel-reservation' : 'reserve-rocket'}
