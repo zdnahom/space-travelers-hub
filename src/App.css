@@ -202,6 +202,9 @@
 
 .profile {
   padding: 2rem 6rem;
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 2rem;
 }
 
 .profile-headline-text {
@@ -210,7 +213,6 @@
 }
 
 .reserved-items-container {
-  width: 50%;
   display: flex;
   flex-direction: column;
 }

@@ -7,8 +7,8 @@ const MyProfile = () => {
   const joinedMissions = missions.filter((mission) => mission.reserved === true);
 
   return (
-    <section>
-     <div>
+    <section className="profile">
+      <div>
         <h2 className="profile-headline-text">My Missions</h2>
         {joinedMissions.length > 0 ? (
           <ul className="reserved-items-container">
