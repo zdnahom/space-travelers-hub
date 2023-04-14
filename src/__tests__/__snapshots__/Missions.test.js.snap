@@ -1,0 +1,439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission component test Join mission  1`] = `
+<div>
+  <section
+    class="missions-container"
+  >
+    <div>
+      <table
+        class="missions"
+      >
+        <thead>
+          <tr
+            class="mission-table-row"
+          >
+            <th
+              class="mission-table-header"
+            >
+              Mission
+            </th>
+            <th
+              class="mission-table-header"
+            >
+              Description
+            </th>
+            <th
+              class="mission-table-header"
+            >
+              Status
+            </th>
+            <th
+              class="mission-table-header"
+            >
+               
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Mars
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Mars is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Jupiter
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Jupiter is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Saturn
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Saturn is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Mission component test Join mission 1`] = `
+<div>
+  <section
+    class="missions-container"
+  >
+    <div>
+      <table
+        class="missions"
+      >
+        <thead>
+          <tr
+            class="mission-table-row"
+          >
+            <th
+              class="mission-table-header"
+            >
+              Mission
+            </th>
+            <th
+              class="mission-table-header"
+            >
+              Description
+            </th>
+            <th
+              class="mission-table-header"
+            >
+              Status
+            </th>
+            <th
+              class="mission-table-header"
+            >
+               
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Mars
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Mars is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Jupiter
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Jupiter is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Saturn
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Saturn is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Mission component test render mission lists 1`] = `
+<div>
+  <section
+    class="missions-container"
+  >
+    <div>
+      <table
+        class="missions"
+      >
+        <thead>
+          <tr
+            class="mission-table-row"
+          >
+            <th
+              class="mission-table-header"
+            >
+              Mission
+            </th>
+            <th
+              class="mission-table-header"
+            >
+              Description
+            </th>
+            <th
+              class="mission-table-header"
+            >
+              Status
+            </th>
+            <th
+              class="mission-table-header"
+            >
+               
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Mars
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Mars is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Jupiter
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Jupiter is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="mission-table-row"
+          >
+            <td
+              class="mission-table-data"
+            >
+              Go to Saturn
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              Saturn is a great planet
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <span
+                class="non-member"
+              >
+                NOT A MEMBER
+              </span>
+            </td>
+            <td
+              class="mission-table-data"
+            >
+              <button
+                class="join-button"
+                type="button"
+              >
+                Join Mission
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+`;
