@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets component test It renders 1`] = `
+<div>
+  <div
+    class="rockets-container"
+  >
+    <div>
+      <div
+        class="rockets"
+      >
+        <img
+          alt="Falcon 1"
+          src="https://i.imgur.com/DaCfMsj.jpg"
+        />
+        <div
+          class="rockets-description"
+        >
+          <h2>
+            Falcon 1
+          </h2>
+          <div
+            class="reserved-para"
+          >
+            <span
+              class=""
+            />
+            <p
+              class="rocket-para"
+            >
+              The first rocket
+            </p>
+          </div>
+          <button
+            class="reserve-rocket"
+            type="button"
+          >
+            Reserve Rocket
+          </button>
+        </div>
+      </div>
+      <div
+        class="rockets"
+      >
+        <img
+          alt="Falcon 9"
+          src="https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg"
+        />
+        <div
+          class="rockets-description"
+        >
+          <h2>
+            Falcon 9
+          </h2>
+          <div
+            class="reserved-para"
+          >
+            <span
+              class=""
+            />
+            <p
+              class="rocket-para"
+            >
+              The second rocket
+            </p>
+          </div>
+          <button
+            class="reserve-rocket"
+            type="button"
+          >
+            Reserve Rocket
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,38 +1,234 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* NavBar */
+
+.navbar-container {
+  padding: 0 4%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 64px;
+}
+
+.logo-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.navbar-ul {
+  display: flex;
+  list-style: none;
+
+  /* background-color: red; */
+  gap: 1rem;
+}
+
+.active-link,
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.active-link {
+  color: #085bb6;
+}
+
+.nav-link {
+  color: #288eff;
+  text-decoration: none;
+}
+
+.vertical-line {
+  border: 1px solid #323639;
+}
+
+/* Rockets */
+
+.rockets-container {
+  margin: 3%;
+}
+
+.rockets img {
+  width: 14%;
+}
+
+.rockets {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 1%;
+}
+
+.rockets-description {
+  width: 70%;
+}
+
+.rockets-description h2 {
+  margin-top: -6px;
+}
+
+.reserved-para {
+  display: flex;
+  gap: 1%;
+}
+
+.reserved {
+  margin-top: 13px;
+  background-color: rgb(11, 165, 189);
+  height: 30%;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 7px;
+}
+
+.rocket-para {
+  margin: 5px 10px 10px 0;
+}
+
+.reserve-rocket {
+  background-color: rgb(66, 66, 224);
+  margin-top: 8px;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+
+.cancel-reservation {
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  border: 2px gray solid;
+  padding: 6px 8px;
+  margin-top: 8px;
+}
+
+/* Missions */
+
+.missions-container {
+  padding: 2rem 6rem;
+}
+
+.missions {
+  border-collapse: collapse;
+}
+
+.mission-table-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mission-table-header,
+.mission-table-data {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.mission-table-header {
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.mission-table-data:nth-child(1),
+.mission-table-data:nth-child(3),
+.mission-table-data:nth-child(4) {
+  width: 15%;
+}
+
+.mission-table-data:nth-child(3),
+.mission-table-data:nth-child(4) {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mission-table-data:nth-child(1) {
+  font-size: 1.3rem;
+  font-weight: 700;
+  vertical-align: top;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.member,
+.non-member {
+  background-color: #6d757d;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 4px 6px;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.member {
+  background-color: #29a9bd;
+}
+
+.leave-button,
+.join-button {
+  background-color: inherit;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.leave-button {
+  border-color: #e46571;
+  color: #e46571;
+}
+
+.leave-button:hover,
+.join-button:hover {
+  transform: scale(1.2, 1.2);
+}
+
+/* MyProfile */
+
+.profile {
+  padding: 2rem 6rem;
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 2rem;
+}
+
+.profile-headline-text {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.reserved-items-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reserved-item {
+  list-style: none;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reserved-item-name,
+.no-reserved {
+  font-size: 1.4rem;
+}
+
+.no-reserved {
+  color: #b4b2b2;
 }

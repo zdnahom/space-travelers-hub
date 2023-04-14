@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+<div align="center">
+  <h1><b>Space Travelers' Hub</b></h1>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+  - [Tech Stack](#tech-stack)
+  - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Getting Started with Create React App](#getting-started-React)
+  - [Available Scripts](#available-scripts)
+  - [Learn More](#learn-more)
+- [👥 Author](#author)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 Space Travelers' Hub <a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Space Travelers' Hub**  is a website for is a website for rockets and spaceship travellors. It is an App that allows users to:
+- To reserve rockets and cancel booking.
+- Become a member of a mission and cancel membership.
+- It gives users the ability to view all their reservations.
+By building this application, I use React/Redux.
 
-### `npm test`
+## 🛠 Built With <a name="built-with"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm run build`
+<details>
+  <summary>Languages</summary>
+  <ul>
+    <li><a href="https://html.spec.whatwg.org/">HTML5 / CSS / JavaScript/ React / Redux</a></li>
+  </ul>
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+  <summary>IDE</summary>
+  <ul>
+    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+  </ul>
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+<summary>Hosting</summary>
+  <ul>
+    <li><a href="https://github.com/">GitHub</a></li>
+  </ul>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+<summary>Library</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React</a></li>
+  </ul>
+</details>
 
-### `npm run eject`
+<!-- Features -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Key Features <a name="key-features"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Displays all available rockets**
+- **Displays all available missions**
+- **Book and cancel reservations**
+- **Displays all booked missions and rockets**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- LIVE DEMO -->
 
-## Learn More
+<!-- ## 🚀 Live Demo <a name="live-demo"></a> --
+- [Live Demo Link](https://math-magic-puce.vercel.app/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- GETTING STARTED -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Code Splitting
+To get a local copy up and running, follow these steps:
+- Get a copy of the project
+- Come into the project directory
+- Open the project using code editor of your choice
+- Open your prefered browser
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites <a name="prerequisites"></a>
 
-### Analyzing the Bundle Size
+In order to run this project:
+- You need a GitHub account.
+- You need to have a Git client installed on your computer.
+- You need to have a copy of the HTML CSS website codebase on your computer.
+- You need a code Editor of your choice.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Setup <a name="setup"></a>
 
-### Making a Progressive Web App
+Clone this repository to your desired folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```sh
+  cd my-folder
+  git clone https://github.com/zdnahom/space-travelers-hub.git
+```
 
-### Advanced Configuration
+### Install <a name="install"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Install all the dependencys required for the website, by using the command below
 
-### Deployment
+```sh
+  cd space-travelers-hub
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- AUTHOR -->
 
-### `npm run build` fails to minify
+## 👥 Author <a name="author"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👤 **Sane Myburg**
+- GitHub: [@SaneMyburg](https://github.com/SaneMyburg)
+- Twitter: [@SaneMyburg](https://twitter.com/SaneMyburg)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sane-myburg/)
+
+👤 **Nahom Zerihun Demissie**
+- GitHub: [@zdnahom](https://github.com/zdnahom)
+- Twitter: [@Nahomzerihum](https://twitter.com/Nahomzerihun11)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/nahomzerihun76/)
+
+<!-- FUTURE FEATURES -->
+
+ ## 🔭 Future Features <a name="future-features"></a>
+
+ - Adding the "Cancel reservation" and "Leave Mission" buttons to the list in the My Profile screen, which will dispatch the actions already used in the main Rockets and Missions sections.
+ - Adding the "Read more" button for each mission and rocket, so that when clicked it will open a corresponding Wikipedia page in a new tab.
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/SaneMyburg/Book-Store/issues).
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Give a ⭐️ if you like this project!
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank:
+- [Microverse](www.microverse.com)
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
